@@ -1,11 +1,10 @@
 import {defaultTheme, defineUserConfig, viteBundler} from 'vuepress'
 import {searchPlugin} from "@vuepress/plugin-search";
-import {googleAnalyticsPlugin} from "@vuepress/plugin-google-analytics";
 
-const base = "/notes"
+const base = "/interview"
 export default defineUserConfig({
     lang: 'zh-CN',
-    title: 'xiaoso知识文档',
+    title: '精简八股',
     base: base + "/",
     head:[
         [
@@ -13,16 +12,13 @@ export default defineUserConfig({
             'link', { rel: 'icon', href: base +'/img/logo.svg' }
         ],
     ],
-    description: 'xiaoso知识文档',
+    description: '精简八股文',
     plugins: [
         // 搜索插件
         searchPlugin({
             // 搜索框显示文字
             placeholder: '搜索'
-        }),
-        googleAnalyticsPlugin({
-            id: 'G-C2XKVMR51B'
-        }),
+        })
     ],
     // 打包配置
     bundler: viteBundler({
@@ -37,23 +33,46 @@ export default defineUserConfig({
                 link: '/',
             },
             {
-                text: 'CI&CD',
+                text: 'Java基础',
                 children: [
                     {
-                        text: 'GitHub Actions',
-                        link: '/CI&CD/github-actions.md'
-                    }
-                ]
-            },
-            {
-                text: '容器云',
-                children: [
+                        text: '基础',
+                        link: '/Java基础/Java基础.md'
+                    },
                     {
-                        text: 'Docker',
-                        link: '/云/docker.md',
-                    }
+                        text: '关键字',
+                        link: '/Java基础/Java关键字.md'
+                    },
+                    {
+                        text: '面向对象',
+                        link: '/Java基础/Java面向对象.md'
+                    },
+                    {
+                        text: '集合',
+                        link: '/Java基础/Java集合.md'
+                    },
+                    {
+                        text: '线程',
+                        link: '/Java基础/Java线程.md'
+                    },
+                    {
+                        text: '锁',
+                        link: '/Java基础/Java锁.md'
+                    },
+                    {
+                        text: '虚拟机',
+                        link: '/Java基础/Java虚拟机.md'
+                    },
+                    {
+                        text: 'GC',
+                        link: '/Java基础/JavaGC.md'
+                    },
+                    {
+                        text: '杂',
+                        link: '/Java基础/Java杂.md'
+                    },
                 ]
-            },
+            }
         ],
         // 侧边栏最大深度，到h3标题
         sidebarDepth: 2,
@@ -72,7 +91,7 @@ export default defineUserConfig({
         warning: '注意',
         danger: '警告',
 
-        repo: 'xiaoso456/notes',
+        repo: 'xiaoso456' + base,
         docsBranch: 'main',
         docsDir: 'docs',
 

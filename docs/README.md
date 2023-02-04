@@ -5,10 +5,9 @@ heroText: null
 heroImage: /img/avatar.jpg
 features:
 - title: 简洁
-  details: 内容少而不全，蜻蜓点水
-- title: 示例丰富
-  details: 示例简单，不适合复杂场景
-- title: 实用
-  details: 关注常用实用内容
-
+  details: 尽量减少不必要术语解释
+- title: 范围
+  details: Java 方面相关
+- title: 易懂
+  details: 举例解释通俗
 ---

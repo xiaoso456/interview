@@ -9,7 +9,7 @@ ES 的索引和文档都是以分片和副本的形式存在在集群中的，ES
 
 单文档：客户端请求 ES 节点，ES 节点根据文档 ID 把请求转发到其它节点，等待结果返回
 
-`1shard = hash(_routing) % (num_of_primary_shards)`
+`1shard = hash(_routing也就是文档id) % (num_of_primary_shards)`
 
 ## 3 并发情况下 ES 如何保证读写一致？
 
